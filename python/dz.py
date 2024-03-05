@@ -115,7 +115,43 @@ def main(m, a, b, y):
     return sum(calculate_expression(j, k, c, y) for
                c in range(1, b + 1) for k in range(1, a + 1) for j in range(1, m + 1))
 print(main(2, 3, 7, -0.52))  # должно быть приблизительно 6.49e+06
+# import math
 
 
+# def main(n):
+#     return (
+#         -0.97
+#         if n == 0
+#         else 0.9
+#         if n == 1
+#         else (pow((
+#             math.ceil(main(n - 2))), 3)) - (
+#                 pow((main(n - 2)), 3) + pow((
+#                     main(n - 2)), 2) + main(n - 1) ) - 2
+#         )
+import math
+def main(n):
+    match n:
+        case 0:
+            return -0.97
+        case 1:
+            return 0.9
+        case _ if n >= 2:
+            return (pow((
+            math.ceil(main(n - 2))), 3)) - (
+                pow((main(n - 2)), 3) + pow((
+                    main(n - 2)), 2) + main(n - 1) ) - 2
+# import math
 
+# def main(n):
+#     return (
+#         -0.97
+#         if n == 0
+#         else 0.9
+#         if n == 1
+#         else math.ceil(main(n - 2)) ** 3 - (main(n - 2) ** 3 + main(n - 2) ** 2 + main(n - 1)) - 2
+#         else math.ceil(main(n - 2) ** 3) - (main(n - 2) ** 3 + main(n - 2) ** 2 + main(n - 1)) - 2
+#     )
+
+print(main(7))
 
