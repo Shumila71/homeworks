@@ -313,127 +313,127 @@ import itertools
 # print(corrected_text)
 
 
-#6.1
-def digital_economy_report_generator(data, paragraphs=3, sentences_per_paragraph=3):
-    for _ in range(paragraphs):
-        paragraph = ''
-        for _ in range(sentences_per_paragraph):
-            row = [random.choice(row) for row in data]
-            paragraph += ' '.join(row) + ' '
-        yield paragraph
+# #6.1
+# def digital_economy_report_generator(data, paragraphs=3, sentences_per_paragraph=3):
+#     for _ in range(paragraphs):
+#         paragraph = ''
+#         for _ in range(sentences_per_paragraph):
+#             row = [random.choice(row) for row in data]
+#             paragraph += ' '.join(row) + ' '
+#         yield paragraph
 
-import random
+# import random
 
-table_data = [
-    ["Коллеги,", "В то же время,", "Однако,", "Тем не менее,", "Следовательно,", "Соответственно,", "Вместе с тем,", "С другой стороны,"],
-    ["парадигма цифровой экономики", "контекст цифровой трансформации", "диджитализация бизнес-процессов", "прагматичный подход к цифровым платформам", "совокупность сквозных технологий", "программа прорывных исследований", "ускорение блокчейн-транзакций", "экспоненциальный рост Big Data"],
-    ["открывает новые возможности для", "выдвигает новые требования", "несёт в себе риски", "расширяет горизонты", "заставляет искать варианты", "не оставляет шанса для", "повышает вероятность", "обостряет проблему"],
-    ["дальнейшего углубления", "бюджетного финансирования", "синергетического эффекта", "компрометации конфиденциальных", "универсальной коммодитизации", "несанкционированной кастомизации", "нормативного регулирования", "практического применения"],
-    ["знаний и компетенций.", "непроверенных гипотез.", "волатильных активов.", "опасных экспериментов.", "государственно-частных партнёрств.", "цифровых следов граждан.", "нежелательных последствий.", "внезапных открытий."]
-]
+# table_data = [
+#     ["Коллеги,", "В то же время,", "Однако,", "Тем не менее,", "Следовательно,", "Соответственно,", "Вместе с тем,", "С другой стороны,"],
+#     ["парадигма цифровой экономики", "контекст цифровой трансформации", "диджитализация бизнес-процессов", "прагматичный подход к цифровым платформам", "совокупность сквозных технологий", "программа прорывных исследований", "ускорение блокчейн-транзакций", "экспоненциальный рост Big Data"],
+#     ["открывает новые возможности для", "выдвигает новые требования", "несёт в себе риски", "расширяет горизонты", "заставляет искать варианты", "не оставляет шанса для", "повышает вероятность", "обостряет проблему"],
+#     ["дальнейшего углубления", "бюджетного финансирования", "синергетического эффекта", "компрометации конфиденциальных", "универсальной коммодитизации", "несанкционированной кастомизации", "нормативного регулирования", "практического применения"],
+#     ["знаний и компетенций.", "непроверенных гипотез.", "волатильных активов.", "опасных экспериментов.", "государственно-частных партнёрств.", "цифровых следов граждан.", "нежелательных последствий.", "внезапных открытий."]
+# ]
 
-report = digital_economy_report_generator(table_data)
+# report = digital_economy_report_generator(table_data)
 
-for _ in range(3):
-    print(next(report))
+# for _ in range(3):
+#     print(next(report))
 
-#6.2
-import re
+# #6.2
+# import re
 
-def sent_tokenize(text):
-    sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', text)
-    return sentences
-def word_tokenize(sentence):
-    words = re.findall(r'\b\w+\b', sentence)
-    return words
-def generate_table(text):
-    sentences = sent_tokenize(text)
+# def sent_tokenize(text):
+#     sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', text)
+#     return sentences
+# def word_tokenize(sentence):
+#     words = re.findall(r'\b\w+\b', sentence)
+#     return words
+# def generate_table(text):
+#     sentences = sent_tokenize(text)
 
-    table_data = [word_tokenize(sentence) for sentence in sentences]
+#     table_data = [word_tokenize(sentence) for sentence in sentences]
 
-    return table_data
-input_text = """
-Коллеги, парадигма цифровой экономики открывает новые возможности для дальнейшего углубления знаний и компетенций. В то же время, контекст цифровой трансформации выдвигает новые требования бюджетного финансирования непроверенных гипотез. 
-Однако, диджитализация бизнес-процессов несёт в себе риски синергетического эффекта волатильных активов. 
-Тем не менее, прагматичный подход к цифровым платформам расширяет горизонты компрометации конфиденциальных опасных экспериментов. 
-Следовательно, совокупность сквозных технологий заставляет искать варианты универсальной коммодитизации государственно-частных партнёрств. 
-Соответственно, программа прорывных исследований не оставляет шанса для несанкционированной кастомизации цифровых следов граждан. 
-Вместе с тем, ускорение блокчейн-транзакций повышает вероятность нормативного регулирования нежелательных последствий. 
-С другой стороны, экспоненциальный рост Big Data обостряет проблему практического применения внезапных открытий.
-"""
-table_data = generate_table(input_text)
-
-
-for row in table_data:
-    print(row)
-
-#6.3
-import random
-
-def generate_random_full_name():
-    common_names = ["Данил", "Роман", "Лев", "Ильдар", "Николай", "Данила", "Семен", "Самир", "Тамерлан", "Святослав", "Герман", "Назар", "Степан", "Леонид"]
-    first_name = random.choice(common_names)
-    last_name = generate_random_last_name()
-    patronymic_initial = random.choice("АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЭЮЯ")
-    full_name = f"{first_name} {patronymic_initial}. {last_name}"
-
-    return full_name
-
-def generate_random_last_name():
-    last_names = ["Фуций", "Фецачли", "Шолодяк", "Тачасяк", "Мугодич", "Табян", "Черев", "Тифомский", "Гузянц", "Набян", "Семидяк", "Башко", "Кунарий", "Гидский", "Сабин"]
-
-    return random.choice(last_names)
-
-for _ in range(15):
-    print(generate_random_full_name())
-
-#6.4
-def train_language_model(text, prefix_length):
-    model = {}
-    for i in range(len(text) - prefix_length):
-        prefix = text[i:i + prefix_length]
-        next_char = text[i + prefix_length]
-        if prefix not in model:
-            model[prefix] = {}
-        if next_char not in model[prefix]:
-            model[prefix][next_char] = 1
-        else:
-            model[prefix][next_char] += 1
-    return model
+#     return table_data
+# input_text = """
+# Коллеги, парадигма цифровой экономики открывает новые возможности для дальнейшего углубления знаний и компетенций. В то же время, контекст цифровой трансформации выдвигает новые требования бюджетного финансирования непроверенных гипотез. 
+# Однако, диджитализация бизнес-процессов несёт в себе риски синергетического эффекта волатильных активов. 
+# Тем не менее, прагматичный подход к цифровым платформам расширяет горизонты компрометации конфиденциальных опасных экспериментов. 
+# Следовательно, совокупность сквозных технологий заставляет искать варианты универсальной коммодитизации государственно-частных партнёрств. 
+# Соответственно, программа прорывных исследований не оставляет шанса для несанкционированной кастомизации цифровых следов граждан. 
+# Вместе с тем, ускорение блокчейн-транзакций повышает вероятность нормативного регулирования нежелательных последствий. 
+# С другой стороны, экспоненциальный рост Big Data обостряет проблему практического применения внезапных открытий.
+# """
+# table_data = generate_table(input_text)
 
 
-def generate_text(model, prefix_length, length):
-    start_index = random.randint(0, len(text) - prefix_length)
-    current_prefix = text[start_index:start_index + prefix_length]
-    generated_text = current_prefix
+# for row in table_data:
+#     print(row)
 
-    for _ in range(length):
-        if current_prefix not in model:
-            break
-        next_char = weighted_choice(model[current_prefix])
-        generated_text += next_char
-        current_prefix = current_prefix[1:] + next_char
-        if current_prefix in model:
-            print(f"{current_prefix}: {model[current_prefix]}")
+# #6.3
+# import random
 
-    return generated_text
+# def generate_random_full_name():
+#     common_names = ["Данил", "Роман", "Лев", "Ильдар", "Николай", "Данила", "Семен", "Самир", "Тамерлан", "Святослав", "Герман", "Назар", "Степан", "Леонид"]
+#     first_name = random.choice(common_names)
+#     last_name = generate_random_last_name()
+#     patronymic_initial = random.choice("АБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЭЮЯ")
+#     full_name = f"{first_name} {patronymic_initial}. {last_name}"
+
+#     return full_name
+
+# def generate_random_last_name():
+#     last_names = ["Фуций", "Фецачли", "Шолодяк", "Тачасяк", "Мугодич", "Табян", "Черев", "Тифомский", "Гузянц", "Набян", "Семидяк", "Башко", "Кунарий", "Гидский", "Сабин"]
+
+#     return random.choice(last_names)
+
+# for _ in range(15):
+#     print(generate_random_full_name())
+
+# #6.4
+# def train_language_model(text, prefix_length):
+#     model = {}
+#     for i in range(len(text) - prefix_length):
+#         prefix = text[i:i + prefix_length]
+#         next_char = text[i + prefix_length]
+#         if prefix not in model:
+#             model[prefix] = {}
+#         if next_char not in model[prefix]:
+#             model[prefix][next_char] = 1
+#         else:
+#             model[prefix][next_char] += 1
+#     return model
 
 
-def weighted_choice(choices):
-    total = sum(choices.values())
-    threshold = random.uniform(0, total)
-    cumulative_prob = 0
-    for choice, freq in choices.items():
-        cumulative_prob += freq
-        if cumulative_prob > threshold:
-            return choice
+# def generate_text(model, prefix_length, length):
+#     start_index = random.randint(0, len(text) - prefix_length)
+#     current_prefix = text[start_index:start_index + prefix_length]
+#     generated_text = current_prefix
 
-text = "На дворе трава, на траве дрова"
-prefix_length = 3
-model = train_language_model(text, prefix_length)
+#     for _ in range(length):
+#         if current_prefix not in model:
+#             break
+#         next_char = weighted_choice(model[current_prefix])
+#         generated_text += next_char
+#         current_prefix = current_prefix[1:] + next_char
+#         if current_prefix in model:
+#             print(f"{current_prefix}: {model[current_prefix]}")
 
-generated_text = generate_text(model, prefix_length, 100)
-print(generated_text)
+#     return generated_text
+
+
+# def weighted_choice(choices):
+#     total = sum(choices.values())
+#     threshold = random.uniform(0, total)
+#     cumulative_prob = 0
+#     for choice, freq in choices.items():
+#         cumulative_prob += freq
+#         if cumulative_prob > threshold:
+#             return choice
+
+# text = "На дворе трава, на траве дрова"
+# prefix_length = 3
+# model = train_language_model(text, prefix_length)
+
+# generated_text = generate_text(model, prefix_length, 100)
+# print(generated_text)
 
 
 #7.1-7.2
@@ -488,7 +488,36 @@ def create_graph(labyrinth):
     
 if __name__ == '__main__':
     lab = Labyrinth()
-    create_graph(lab)
-    run(lab)
-    
+    # create_graph(lab)
+    # run(lab)
 
+    
+    
+#8.1
+import os
+import argparse
+
+def ls(directory='.', show_hidden=False, long_format=False):
+    files = os.listdir(directory)
+    if not show_hidden:
+        files = [f for f in files if not f.startswith('.')]
+    files.sort()
+
+    if long_format:
+        for file in files:
+            file_path = os.path.join(directory, file)
+            file_stats = os.stat(file_path)
+            print(f"{file_stats.st_mode:10o} {file_stats.st_nlink:3} {file_stats.st_uid:5} {file_stats.st_gid:5} {file_stats.st_size:10} {file} {file_stats.st_mtime}")
+    else:
+        print('\n'.join(files))
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Analog of the ls command')
+    parser.add_argument('directory', nargs='?', default='.', help='Directory to list (default: current directory)')
+    parser.add_argument('-a', '--all', action='store_true', help='Show all files, including hidden files')
+    parser.add_argument('-l', '--long', action='store_true', help='Use a long listing format')
+
+    args = parser.parse_args()
+
+    ls(args.directory, args.all, args.long)
+#8.2
