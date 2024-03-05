@@ -1,42 +1,42 @@
 def main(data):
     match data:
-        case["MUPAD", 1974, 1985, 2019]:
-            return 0
-        case["MUPAD", 1974, 1985, 2014]:
-            return 0
-        case["MUPAD", 1989, 1985, 2019]:
-            return 1
-        case["MUPAD", 1989, 1985, 2014]:
-            return 1
-        case["MUPAD", 2012, 1985, 2019]:
-            return 2
-        case["MUPAD", 2012, 1985, 2014]:
-            return 2
-        case["MUPAD", 1974, 2005, 2019]:
-            return 3
-        case["MUPAD", 1989, 2005, 2019]:
-            return 3
+        case[2017, 1971, 1968, 'C++']:
+            return 12
+        case[2017, 1971, 1964, 'C++']:
+            return 12
+        case[2017, 1971, 1968, 'NU']:
+            return 12
+        case[2017, 1971, 1964, 'NU']:
+            return 12
+        case[2017, 1971, 1968, 'MINID']:
+            return 12
+        case[2017, 1971, 1964, 'MINID']:
+            return 12
+        case[2017, 1965, 1968, 'C++']:
+            return 12
+        case[2017, 1965, 1964, 'C++']:
+            return 12
         case _:
             return main2(data)
 
 
 def main2(data):
     match data:
-        case["MUPAD", 2012, 2005, 2019]:
-            return 3
-        case["MUPAD", 1974, 2005, 2014]:
-            return 4
-        case["MUPAD", 1989, 2005, 2014]:
-            return 4
-        case["MUPAD", 2012, 2005, 2014]:
-            return 4
-        case["MUPAD", 1974, 1965, 2019]:
+        case[2017, 1965, 1968, 'NU']:
+            return 12
+        case[2017, 1965, 1964, 'NU']:
+            return 12
+        case[2017, 1965, 1968, 'MINID']:
+            return 12
+        case[2017, 1965, 1964, 'MINID']:
+            return 12
+        case[2017, 1978, 1968, 'C++']:
+            return 12
+        case[2017, 1978, 1964, 'C++']:
             return 5
-        case["MUPAD", 1989, 1965, 2019]:
+        case[2017, 1978, 1968, 'NU']:
             return 5
-        case["MUPAD", 2012, 1965, 2019]:
-            return 5
-        case["MUPAD", 1974, 1965, 2014]:
+        case[2017, 1978, 1964, 'NU']:
             return 5
         case _:
             return main3(data)
@@ -44,85 +44,99 @@ def main2(data):
 
 def main3(data):
     match data:
-        case["MUPAD", 1989, 1965, 2014]:
-            return 5
-        case["MUPAD", 2012, 1965, 2014]:
-            return 5
-        case["VHDL", 1974, 1965, 2019]:
+        case[2017, 1978, 1968, 'MINID']:
+            return 12
+        case[2017, 1978, 1964, 'MINID']:
+            return 12
+        case[1982, 1971, 1982, 'C++']:
             return 6
-        case["VHDL", 1974, 1985, 2019]:
+        case[1982, 1965, 1982, 'C++']:
             return 6
-        case["VHDL", 1974, 2005, 2019]:
+        case[1982, 1978, 1982, 'C++']:
             return 6
-        case["VHDL", 1974, 1965, 2014]:
-            return 6
-        case["VHDL", 1974, 1985, 2014]:
-            return 6
-        case["VHDL", 1974, 2005, 2014]:
-            return 6
+        case[1982, 1965, 1968, 'C++']:
+            return 7
+        case[1982, 1965, 1964, 'C++']:
+            return 7
+        case[1982, 1978, 1968, 'C++']:
+            return 8
         case _:
             return main4(data)
 
 
 def main4(data):
     match data:
-        case["VHDL", 1989, 1965, 2019]:
-            return 7
-        case["VHDL", 1989, 1985, 2019]:
-            return 7
-        case["VHDL", 1989, 2005, 2019]:
-            return 7
-        case["VHDL", 1974, 1965, 2019]:
-            return 6
-        case["VHDL", 1974, 1985, 2019]:
-            return 6
-        case["VHDL", 1974, 2005, 2019]:
-            return 6
-        case["VHDL", 1974, 1965, 2014]:
-            return 6
-        case["VHDL", 1974, 1985, 2014]:
-            return 6
+        case[1982, 1978, 1964, 'C++']:
+            return 8
+        case[1982, 1978, 1968, 'NU']:
+            return 9
+        case[1982, 1965, 1968, 'NU']:
+            return 9
+        case[1982, 1971, 1968, 'NU']:
+            return 9
+        case[1982, 1978, 1964, 'NU']:
+            return 10
+        case[1982, 1965, 1964, 'NU']:
+            return 10
+        case[1982, 1971, 1964, 'NU']:
+            return 10
+        case[1960, 1965, 1968, 'C++']:
+            return 3
         case _:
             return main5(data)
 
 
 def main5(data):
     match data:
-        case["VHDL", 1974, 2005, 2014]:
-            return 6
-        case["VHDL", 1989, 1965, 2019]:
-            return 7
-        case["VHDL", 1989, 1985, 2019]:
-            return 7
-        case["VHDL", 1989, 2005, 2019]:
-            return 7
-        case["VHDL", 1989, 1965, 2014]:
-            return 8
-        case["VHDL", 1989, 1985, 2014]:
-            return 8
-        case["VHDL", 1989, 2005, 2014]:
-            return 8
-        case["VHDL", 2012, 1965, 2019]:
-            return 9
+        case[1960, 1965, 1968, 'NU']:
+            return 3
+        case[1960, 1965, 1968, 'MINID']:
+            return 3
+        case[1960, 1965, 1964, 'C++']:
+            return 4
+        case[1960, 1965, 1964, 'NU']:
+            return 4
+        case[1960, 1965, 1964, 'MINID']:
+            return 4
+        case[1960, 1971, 1964, 'C++']:
+            return 0
+        case[1960, 1971, 1968, 'C++']:
+            return 0
+        case[1960, 1971, 1964, 'NU']:
+            return 1
         case _:
             return main6(data)
 
 
 def main6(data):
     match data:
-        case ["VHDL", 2012, 1985, 2019]:
-            return 9
-        case ["VHDL", 2012, 2005, 2019]:
-            return 9
-        case ["VHDL", 2012, 1965, 2014]:
-            return 9
-        case ["VHDL", 2012, 1985, 2014]:
-            return 9
-        case ["VHDL", 2012, 2005, 2014]:
-            return 9
+        case [1960, 1971, 1968, 'NU']:
+            return 1
+        case [1960, 1971, 1964, 'MINID']:
+            return 2
+        case [1960, 1971, 1968, 'MINID']:
+            return 2
+        case [1982, 1971, 1968, 'MINID']:
+            return 11
+        case [1982, 1965, 1964, 'MINID']:
+            return 11
         case _:
-            return 10
+            return main7(data)
+
+
+def main7(data):
+    match data:
+        case [1982, 1978, 1968, 'MINID']:
+            return 11
+        case [1982, 1971, 1964, 'MINID']:
+            return 11
+        case [1982, 1965, 1968, 'MINID']:
+            return 11
+        case [1982, 1978, 1964, 'MINID']:
+            return 11
+        case _:
+            return 5
 
 
 
-print(main(["VHDL", 1974, 1985, 2014]))
+print(main([1982,  1971,  1968,  'NU'])) #= 9
