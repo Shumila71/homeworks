@@ -434,3 +434,48 @@ model = train_language_model(text, prefix_length)
 
 generated_text = generate_text(model, prefix_length, 100)
 print(generated_text)
+
+
+#7.1-7.2
+class Labyrinth:
+    def __init__(self, filename='d:\code\_4\python\labirint.txt'):
+        self.rooms = []
+        with open(filename, 'r') as file:
+            while True:
+                data = file.readline().rstrip().split()
+                if data[0] == '0':
+                    break
+                room_data = list(map(int, data))
+                self.rooms.append(Room(room_data[0], *room_data[1:]))
+
+
+class Room:
+    def __init__(self, num, *paths):
+        self.num = num
+        self.paths = paths
+
+
+def run(labyrinth):
+    directions = ['Север', 'Запад', 'Юг', 'Восток']
+    current_room = labyrinth.rooms[0]
+    print('Начало лабиринта. Вы в начале лабиринта. Сможете из него выбраться?')
+    while True:
+        print(f'\nКомната №{current_room.num}\nВы находитесь в комнате №{current_room.num}')
+        print("1 проход на Север\n2 проход на Запад\n3 проход на Юг\n4 проход на Восток")
+        valid_choices = [index for index, path in enumerate(current_room.paths) if path != -1]
+        try:
+            user_choice = int(input('Выберите направление: ')) - 1
+            if user_choice in valid_choices:
+                next_room_index = current_room.paths[user_choice]
+                if next_room_index == 0:
+                    print('Поздравляю, победа!')
+                    break
+                current_room = labyrinth.rooms[next_room_index - 1]
+            else:
+                print('Некорректный выбор. Попробуйте еще раз.')
+        except ValueError:
+            print('Ошибка. Введите число.')
+
+if __name__ == '__main__':
+    lab = Labyrinth()
+    run(lab)
