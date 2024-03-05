@@ -343,18 +343,15 @@ import re
 def sent_tokenize(text):
     sentences = re.split(r'(?<!\w\.\w.)(?<![A-Z][a-z]\.)(?<=\.|\?)\s', text)
     return sentences
-
 def word_tokenize(sentence):
     words = re.findall(r'\b\w+\b', sentence)
     return words
-
 def generate_table(text):
     sentences = sent_tokenize(text)
 
     table_data = [word_tokenize(sentence) for sentence in sentences]
 
     return table_data
-
 input_text = """
 Коллеги, парадигма цифровой экономики открывает новые возможности для дальнейшего углубления знаний и компетенций. В то же время, контекст цифровой трансформации выдвигает новые требования бюджетного финансирования непроверенных гипотез. 
 Однако, диджитализация бизнес-процессов несёт в себе риски синергетического эффекта волатильных активов. 
@@ -364,8 +361,6 @@ input_text = """
 Вместе с тем, ускорение блокчейн-транзакций повышает вероятность нормативного регулирования нежелательных последствий. 
 С другой стороны, экспоненциальный рост Big Data обостряет проблему практического применения внезапных открытий.
 """
-
-
 table_data = generate_table(input_text)
 
 
