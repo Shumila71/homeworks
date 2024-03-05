@@ -250,6 +250,68 @@ import itertools
 # corrected_text = ' '.join(spell(word) for word in text.split())
 # print(corrected_text)
 
+#5.7
+# from collections import Counter
+# from functools import cache
+
+# # Замены английских букв на русские и перестановки пар соседних символов
+# transpositions = {
+#     'a': 'а',
+#     'c': 'с',
+#     'e': 'е',
+#     'o': 'о',
+#     'p': 'р',
+#     'x': 'х',
+#     'y': 'у',
+#     'k': 'к'
+# }
+
+# def load_dictionary(file_path):
+#     dictionary = {}
+#     with open(file_path, 'r', encoding='utf-8') as file:
+#         for line in file:
+#             word, frequency = line.strip().split()
+#             dictionary[word] = int(frequency)
+#     return dictionary
+
+# file_path = 'd:\code\_4\python\words.txt'
+# dictionary = load_dictionary(file_path)
+
+# @cache
+# def lev_dist(s1, s2):
+#     if not s1:
+#         return len(s2)
+#     if not s2:
+#         return len(s1)
+
+#     # Учитываем замены и перестановки
+#     cost = 0 if s1[-1] == s2[-1] or s1[-1] in transpositions and transpositions[s1[-1]] == s2[-1] else 1
+
+#     return min(lev_dist(s1[:-1], s2) + 1,
+#                lev_dist(s1, s2[:-1]) + 1,
+#                lev_dist(s1[:-1], s2[:-1]) + cost)
+
+
+# def spell(word):
+#     if word in dictionary:
+#         return word
+
+#     similar_words_lev1 = [w for w in dictionary if lev_dist(w, word) == 1]
+#     if similar_words_lev1:
+#         most_popular_lev1 = max(similar_words_lev1, key=lambda x: dictionary[x])
+#         return most_popular_lev1
+
+#     similar_words_lev2 = [w for w in dictionary if lev_dist(w, word) == 2]
+#     if similar_words_lev2:
+#         most_popular_lev2 = max(similar_words_lev2, key=lambda x: dictionary[x])
+#         return most_popular_lev2
+
+#     return word
+
+# text = 'каравэлла убижала в бурлин'
+# corrected_text = ' '.join(spell(word) for word in text.split())
+# print(corrected_text)
+
 
 #6.1
 def digital_economy_report_generator(data, paragraphs=3, sentences_per_paragraph=3):
