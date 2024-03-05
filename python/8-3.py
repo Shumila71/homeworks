@@ -26,10 +26,10 @@ def main():
         print(processed_text)
     elif len(sys.argv) == 2:  
         file_name = sys.argv[1]
-        with open(file_name, 'r') as file:
+        with open(file_name, 'r',encoding='UTF-8') as file:
             text = file.read()
         processed_text = process_quotes(text)
-        with open(file_name[:-3] + '_processed.md', 'w') as file:  
+        with open(file_name[:-3] + '_processed.md', 'w',encoding='UTF-8') as file:  
             file.write(processed_text)
         print("Файл обработан успешно.")
     else:
