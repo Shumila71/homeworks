@@ -437,59 +437,72 @@ import itertools
 
 
 #7.1-7.2
-import graphviz
-class Labyrinth:
-    def __init__(self, filename='d:\code\_4\python\labirint.txt'):
-        self.rooms = []
-        with open(filename, 'r') as file:
-            while True:
-                data = file.readline().rstrip().split()
-                if data[0] == '0':
-                    break
-                room_data = list(map(int, data))
-                self.rooms.append(Room(room_data[0], *room_data[1:]))
+# import graphviz
+# class Labyrinth:
+#     def __init__(self, filename='d:\code\_4\python\labirint.txt'):
+#         self.rooms = []
+#         with open(filename, 'r') as file:
+#             while True:
+#                 data = file.readline().rstrip().split()
+#                 if data[0] == '0':
+#                     break
+#                 room_data = list(map(int, data))
+#                 self.rooms.append(Room(room_data[0], *room_data[1:]))
 
 
-class Room:
-    def __init__(self, num, *paths):
-        self.num = num
-        self.paths = paths
+# class Room:
+#     def __init__(self, num, *paths):
+#         self.num = num
+#         self.paths = paths
 
 
-def run(labyrinth):
-    directions = ['Север', 'Запад', 'Юг', 'Восток']
-    current_room = labyrinth.rooms[0]
-    print('Начало лабиринта. Вы в начале лабиринта. Сможете из него выбраться?')
-    while True:
-        print(f'\nКомната №{current_room.num}\nВы находитесь в комнате №{current_room.num}')
-        print("1 проход на Север\n2 проход на Запад\n3 проход на Юг\n4 проход на Восток")
-        valid_choices = [index for index, path in enumerate(current_room.paths) if path != -1]
-        try:
-            user_choice = int(input('Выберите направление: ')) - 1
-            if user_choice in valid_choices:
-                next_room_index = current_room.paths[user_choice]
-                if next_room_index == 0:
-                    print('Поздравляю, победа!')
-                    break
-                current_room = labyrinth.rooms[next_room_index - 1]
-            else:
-                print('Некорректный выбор. Попробуйте еще раз.')
-        except ValueError:
-            print('Ошибка. Введите число.')
-def create_graph(labyrinth):
-    a = graphviz.Graph('g', filename='file.gv')
-    for i in labyrinth.rooms:
-        for j in range(4):
-            if i.paths[j] != -1:
-                if i.paths[j]=='0':
-                    a.edge(str(i.num), "WIN!!!!!!!!")
-                a.edge(str(i.num), str(i.paths[j]))
-    a.view()
+# def run(labyrinth):
+#     directions = ['Север', 'Запад', 'Юг', 'Восток']
+#     current_room = labyrinth.rooms[0]
+#     print('Начало лабиринта. Вы в начале лабиринта. Сможете из него выбраться?')
+#     while True:
+#         print(f'\nКомната №{current_room.num}\nВы находитесь в комнате №{current_room.num}')
+#         print("1 проход на Север\n2 проход на Запад\n3 проход на Юг\n4 проход на Восток")
+#         valid_choices = [index for index, path in enumerate(current_room.paths) if path != -1]
+#         try:
+#             user_choice = int(input('Выберите направление: ')) - 1
+#             if user_choice in valid_choices:
+#                 next_room_index = current_room.paths[user_choice]
+#                 if next_room_index == 0:
+#                     print('Поздравляю, победа!')
+#                     break
+#                 current_room = labyrinth.rooms[next_room_index - 1]
+#             else:
+#                 print('Некорректный выбор. Попробуйте еще раз.')
+#         except ValueError:
+#             print('Ошибка. Введите число.')
+# def create_html(labyrinth):
+#     direction = ['Север', 'Запад', 'Юг', 'Восток']
+#     for j in range(len(labyrinth.rooms)):
+#         with open(f'{labyrinth.rooms[j].num}.html', 'w') as file:
+#             file.write(f'<body><h1>Комната №{labyrinth.rooms[j].num}</h1><ul>')
+#             a = ''
+#             for i in range(4):
+#                 if labyrinth.rooms[j].paths[i] != -1:
+#                     a+=f'<li><a href="{labyrinth.rooms[j].paths[i]}.html">проход на {direction[i]}</a></li>'
+#             file.write(a)
+#             file.write('</ul></body>')
+#             file.close()
+# def create_graph(labyrinth):
+#     a = graphviz.Graph('g', filename='file.gv')
+#     for i in labyrinth.rooms:
+#         for j in range(4):
+#             if i.paths[j] != -1:
+#                 if i.paths[j]=='0':
+#                     a.edge(str(i.num), "WIN!!!!!!!!")
+#                 a.edge(str(i.num), str(i.paths[j]))
+#     a.view()
     
-if __name__ == '__main__':
-    lab = Labyrinth()
-    # create_graph(lab)
-    # run(lab)
+# if __name__ == '__main__':
+#     lab = Labyrinth()
+#     create_html(lab)
+#     create_graph(lab)
+#     run(lab)
 
     
     
@@ -497,7 +510,7 @@ if __name__ == '__main__':
 import os
 import argparse
 
-def ls(directory='.', show_hidden=False, long_format=False):
+def ls(directory='D:/code/_4/', show_hidden=False, long_format=False):
     files = os.listdir(directory)
     if not show_hidden:
         files = [f for f in files if not f.startswith('.')]
@@ -513,11 +526,9 @@ def ls(directory='.', show_hidden=False, long_format=False):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Analog of the ls command')
-    parser.add_argument('directory', nargs='?', default='.', help='Directory to list (default: current directory)')
-    parser.add_argument('-a', '--all', action='store_true', help='Show all files, including hidden files')
-    parser.add_argument('-l', '--long', action='store_true', help='Use a long listing format')
+    parser.add_argument('directory', nargs='?', default='D:/code/_4', help='Directory to list (default: current directory)')
 
     args = parser.parse_args()
 
-    ls(args.directory, args.all, args.long)
+    ls(args.directory)
 #8.2
