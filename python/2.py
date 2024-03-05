@@ -437,6 +437,7 @@ print(generated_text)
 
 
 #7.1-7.2
+import graphviz
 class Labyrinth:
     def __init__(self, filename='d:\code\_4\python\labirint.txt'):
         self.rooms = []
@@ -475,7 +476,19 @@ def run(labyrinth):
                 print('Некорректный выбор. Попробуйте еще раз.')
         except ValueError:
             print('Ошибка. Введите число.')
-
+def create_graph(labyrinth):
+    a = graphviz.Graph('g', filename='file.gv')
+    for i in labyrinth.rooms:
+        for j in range(4):
+            if i.paths[j] != -1:
+                if i.paths[j]=='0':
+                    a.edge(str(i.num), "WIN!!!!!!!!")
+                a.edge(str(i.num), str(i.paths[j]))
+    a.view()
+    
 if __name__ == '__main__':
     lab = Labyrinth()
+    create_graph(lab)
     run(lab)
+    
+
