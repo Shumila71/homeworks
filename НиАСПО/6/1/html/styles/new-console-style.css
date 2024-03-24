@@ -1,0 +1,204 @@
+.card1 {
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 350px;
+    height: 450px;
+    transition: transform 0.4s;
+    border-radius: 1rem;
+    z-index: 3;
+    grid-area: e1;
+
+}
+.card1:hover {
+    transform: scale(1.05);
+}
+.glass{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: rgba(10, 122, 166, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 1rem;
+    z-index: 2;
+
+}
+.bg-gr {
+    position: relative;
+    top:-500px;
+    left: 20%;
+    height: 550px;
+    width: 180px;
+    z-index: 1;
+    background: linear-gradient(to bottom right, #ba12e4, #9e1604);
+    transform: skew(8deg, 0);
+    border-radius: 1em;
+    transition: all .4s ease-in-out;
+}
+.bg-gr::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background: linear-gradient(to bottom right, #ba12e4, #9e1604);
+    filter: blur(10px); 
+}
+.card1:hover .bg-gr {
+    transform: skew(0deg, 0);
+}
+.content1 {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    z-index: 3;
+}
+.animation-square {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(15, 106, 145, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 5;
+    display: none;
+}
+.animation-square1 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: rgba(15, 106, 145, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 5;
+    display: none;
+}
+.card1:hover .animation-square {
+    display: block;
+    animation: CardAnimation .8s ease-out forwards;
+}
+.card1:hover .animation-square1 {
+    display: block;
+    animation: CardAnimation1 .8s ease-out forwards;
+}
+.two-column-grid{
+    display: grid;
+    grid-template-columns: 45% 1fr ;
+    gap: 25px;
+    grid-template-areas: "e1 e2";
+    margin-bottom: 36px;
+}
+.column-flex-left{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+.column-flex-left img{
+    margin: 144px 0;
+    width: 55%;
+}
+.column-flex-right{
+    display: flex;
+    flex-direction: column;
+}
+.column-flex-right p{
+    margin-top: 24px;
+    margin-bottom: 0;
+}
+.column-flex-right h2{
+    margin-top: 36px;
+    margin-bottom: 0;
+}
+.img-part{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+.new-console img{
+    max-width: 100%;
+    border-radius: 10px;
+}
+#first-img{
+    margin-top: 36px;
+}
+.new-console #underline::after{
+    bottom:0;
+    position: relative;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #3498db;
+    display: block;
+    margin-top: 10px;
+    transition: width 0.3s;
+}
+.new-console .img-hide-pc{
+    display: none;
+}
+@keyframes CardAnimation {
+    from {
+        opacity: 50%;
+        top:-20%;
+        left:0;
+    }
+    to{
+        top: -5%;
+        left: 10%;
+        opacity: 1;
+    }
+}
+@keyframes CardAnimation1 {
+    from {
+        opacity: 50%;
+        bottom:-20%;
+        right:0;
+    }
+    to{
+        bottom:-5%;
+        right: 10%;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .two-column-grid .card1 {
+        margin-bottom: 10px;
+        height: 350px;
+    }
+    .bg-gr {
+        height: 450px;
+        top:-400px;
+    }
+    .two-column-grid .img-hide-mobile {
+        display: none;
+    }
+    .two-column-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "e1"
+        "e2";
+    }
+    .animation-square, .animation-square1{
+        z-index: 3;
+    }
+    .new-console .img-hide-pc{
+        display: block;
+        margin: 0;
+    }
+    .new-console .underline-img::after {
+        bottom: 0;
+        content: "";
+        width: 100%;
+        height: 3px;
+        background-color: #3498db;
+        display: block;
+        margin-top: 10px;
+        position: absolute;
+        content: "";
+    }
+}

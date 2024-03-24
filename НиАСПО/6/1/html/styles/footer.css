@@ -1,0 +1,136 @@
+footer {
+    grid-area: footer;
+    margin-top: 60px;
+    text-align: center;
+}
+.btn4 {
+    background-color: var(--bg-sec-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--header-text-color);
+    border-radius: 6px;
+    color: #f5f5f5;
+}
+.btn4:hover {
+    box-shadow: 1px 1px 25px 1px rgb(116, 48, 129,0.4);
+}
+.btn4:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgb(116, 48, 129,0.4),
+        transparent
+    );
+    transition: all 0.7s;
+}
+.btn4:hover:before {
+  left: 100%;
+}
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+.social-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 10px;
+    background: var(--bg-sec-color);
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social-button::before {
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: 100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, #ba12e4, #9e1604);
+    transition: all 0.4s ease-out;
+}
+.social-button:hover::before {
+    bottom: 0;
+}
+.social-button img{
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+.copyr{
+    grid-area: g4;
+}
+.about-us{
+    grid-area: g1;
+}
+.footer-content .contacts{
+    grid-area: g2;
+}
+.footer-content .quick-links{
+    grid-area: g3;
+}
+.footer-item {
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.footer-item:hover {
+    transform: scale(1.01);
+}
+.footer-item h3 {
+    font-size: 24px;
+}
+.footer-item::before {
+    top:100%;
+    position: relative;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #3498db;
+    display: block;
+    margin: 10px 0;
+    transition: width 0.3s;
+}
+.footer-item:hover::before {
+    width: 50%;
+}
+.quick-links a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.quick-links a:hover {
+    color: #2078a4;
+}
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "g1 g2 g3"
+    "g4 g4 g4";
+    gap: 5px 20px ;
+}
+.fast-links{
+    display: grid;
+    gap: .35rem;
+}
+@media screen and (max-width: 490px) {
+    footer {
+        margin-top: 2rem;
+    }
+}

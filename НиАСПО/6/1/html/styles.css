@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    background-image: url("https://img.freepik.com/free-vector/abstract-white-shapes-background_79603-1362.jpg?size=626&ext=jpg&ga=GA1.2.368205978.1694727086&semt=ais");
+    backdrop-filter: blur(5px); 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Press Start 2P';
+    color: rgb(25, 43, 122);
+}
+
+footer address {
+    font-family: 'Press Start 2P';
+    color: #FF5733; 
+    margin-bottom: 2px; 
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+dl > dt {
+    font-family: 'Press Start 2P';
+    color: #FF5733; 
+    margin-bottom: 2px; 
+    margin-top: 6px;
+}
+
+div ~ hr{
+    border-top: 3px solid rgb(25, 43, 122);
+    margin: 20px 0;
+ }
+
+.nameSite {
+    font-family: 'Press Start 2P';
+    text-align: center; 
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-top: 20px;
+    color: rgb(116, 48, 129);
+}
+
+nav a:link {
+    text-decoration: none;
+    color: #209347; 
+}
+
+nav a:hover {
+    color: #FF5733; 
+}
+
+nav a:active {
+    color: #0099cc;
+}
+
+nav a:visited {
+    color: #666; 
+}
+
+aside {
+    position: fixed;  
+    right: 10px;
+    width: 20%;
+}
