@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-31T12:30:57.485Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="ugjaVB_QudnOxdv6qJzs" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-31T12:35:18.522Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="s5lN1r4EkRqigTN9c4r2" version="24.0.7" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="712" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="472" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -91,7 +91,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="JV1Mk4GfQYpAjEkD_vr5-42" value="Студент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
-          <mxGeometry x="180" y="570" width="30" height="60" as="geometry" />
+          <mxGeometry x="180" y="567" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="JV1Mk4GfQYpAjEkD_vr5-43" value="Слушатель" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
           <mxGeometry x="160" y="440" width="110" height="50" as="geometry" />
@@ -112,13 +112,13 @@
             <mxPoint x="320" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-49" value="Запрос записи на семинар" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="JV1Mk4GfQYpAjEkD_vr5-44">
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-49" value="Запрос записи на семинар" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="210" y="603" as="sourcePoint" />
+            <mxPoint x="210" y="590" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="300" y="603" />
+              <mxPoint x="300" y="590" />
             </Array>
-            <mxPoint x="390" y="603" as="targetPoint" />
+            <mxPoint x="425" y="590" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="JV1Mk4GfQYpAjEkD_vr5-50" value="Запрос истории&amp;nbsp;&lt;div&gt;пройденных семинаров&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="JV1Mk4GfQYpAjEkD_vr5-44" target="JV1Mk4GfQYpAjEkD_vr5-45">
@@ -140,6 +140,36 @@
               <mxPoint x="655" y="153.5" />
             </Array>
             <mxPoint x="715" y="180" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-52" value="&lt;span style=&quot;text-align: center;&quot;&gt;Проверка посещений&lt;/span&gt;" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="JV1Mk4GfQYpAjEkD_vr5-43" target="JV1Mk4GfQYpAjEkD_vr5-43">
+          <mxGeometry x="0.1364" y="-14" relative="1" as="geometry">
+            <mxPoint x="200" y="410" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="210" y="440" />
+              <mxPoint x="210" y="420" />
+              <mxPoint x="110" y="420" />
+              <mxPoint x="110" y="465" />
+            </Array>
+            <mxPoint x="110" y="423" as="targetPoint" />
+            <mxPoint x="4" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-53" value="Вернуть статус" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;elbow=vertical;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="JV1Mk4GfQYpAjEkD_vr5-43" target="JV1Mk4GfQYpAjEkD_vr5-44">
+          <mxGeometry x="0.1974" y="15" relative="1" as="geometry">
+            <mxPoint x="320" y="230" as="targetPoint" />
+            <mxPoint x="715" y="230" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-54" value="Результат попытки&amp;nbsp;&lt;div&gt;записи на семинар&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="JV1Mk4GfQYpAjEkD_vr5-42">
+          <mxGeometry x="-0.0233" y="30" relative="1" as="geometry">
+            <mxPoint x="225" y="610" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="225" y="610" />
+            </Array>
+            <mxPoint x="425" y="610" as="sourcePoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
