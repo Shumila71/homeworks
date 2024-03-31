@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-31T13:12:20.163Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="nntHAGytO3yFLw2n5tz3" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-31T13:21:05.181Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="ibc9N_ep0NlxSpRGgYLk" version="24.0.7" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="544" dy="554" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1259" dy="681" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -207,6 +207,45 @@
               <mxPoint x="1120" y="310" />
             </Array>
             <mxPoint x="1319.5" y="310" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-72" value="Клиент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="990" y="557" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-74" value="Место встречи с агентом" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1235" y="568" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-75" value="База данных семинаров" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="480" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-76" value="Встреча с агентом недвижимости" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1020" y="610" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1110" y="610" />
+            </Array>
+            <mxPoint x="1235" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-77" value="Осмотр недвижимости" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="JV1Mk4GfQYpAjEkD_vr5-74" target="JV1Mk4GfQYpAjEkD_vr5-75">
+          <mxGeometry x="-0.0983" relative="1" as="geometry">
+            <mxPoint x="1130" y="140" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="1220" y="550" />
+              <mxPoint x="1245" y="113.5" />
+            </Array>
+            <mxPoint x="1335" y="140" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-85" value="Принятие решения о&amp;nbsp;&lt;div&gt;заключении сделки&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="JV1Mk4GfQYpAjEkD_vr5-75" target="JV1Mk4GfQYpAjEkD_vr5-72">
+          <mxGeometry x="-0.172" relative="1" as="geometry">
+            <mxPoint x="910" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1050" y="500" />
+            </Array>
+            <mxPoint x="1329.5" y="390" as="sourcePoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
