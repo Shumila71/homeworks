@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-03-31T12:20:13.604Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="FAiC7HK1eiER2vjq1ydt" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-31T12:30:57.485Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 YaBrowser/24.1.0.0 Safari/537.36" etag="ugjaVB_QudnOxdv6qJzs" version="24.0.7" type="github">
   <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
-    <mxGraphModel dx="491" dy="530" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="712" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -32,26 +32,8 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-9" value="callback" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="365" y="450" as="sourcePoint" />
-            <Array as="points">
-              <mxPoint x="290" y="450" />
-            </Array>
-            <mxPoint x="190" y="450" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="aM9ryv3xv72pqoxQDRHE-10" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="335" y="490.5" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="250" y="490.5" />
-            </Array>
-            <mxPoint x="160" y="490.5" as="sourcePoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="JV1Mk4GfQYpAjEkD_vr5-23" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
-          <mxGeometry x="90" y="94" width="10" height="206" as="geometry" />
+          <mxGeometry x="90" y="94" width="10" height="216" as="geometry" />
         </mxCell>
         <mxCell id="JV1Mk4GfQYpAjEkD_vr5-25" value="Студент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
           <mxGeometry x="80" y="10" width="30" height="60" as="geometry" />
@@ -105,6 +87,59 @@
               <mxPoint x="100" y="270" />
             </Array>
             <mxPoint x="365" y="260" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-42" value="Студент" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="570" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-43" value="Слушатель" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="160" y="440" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-44" value="Учебный отдел" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="425" y="578" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-45" value="База данных семинаров" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="425" y="440" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-46" value="Запрос записи на семинар" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="350" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="220" y="350" />
+              <mxPoint x="235" y="330" />
+            </Array>
+            <mxPoint x="320" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-49" value="Запрос записи на семинар" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="JV1Mk4GfQYpAjEkD_vr5-44">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="603" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="300" y="603" />
+            </Array>
+            <mxPoint x="390" y="603" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-50" value="Запрос истории&amp;nbsp;&lt;div&gt;пройденных семинаров&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="JV1Mk4GfQYpAjEkD_vr5-44" target="JV1Mk4GfQYpAjEkD_vr5-45">
+          <mxGeometry x="-0.3636" y="-70" relative="1" as="geometry">
+            <mxPoint x="320" y="150" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="480" y="530" />
+              <mxPoint x="435" y="123.5" />
+            </Array>
+            <mxPoint x="525" y="150" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JV1Mk4GfQYpAjEkD_vr5-51" value="Передача списка семинаров" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="JV1Mk4GfQYpAjEkD_vr5-45" target="JV1Mk4GfQYpAjEkD_vr5-43">
+          <mxGeometry x="-0.0323" y="-5" relative="1" as="geometry">
+            <mxPoint x="535" y="180" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="360" y="465" />
+              <mxPoint x="655" y="153.5" />
+            </Array>
+            <mxPoint x="715" y="180" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
