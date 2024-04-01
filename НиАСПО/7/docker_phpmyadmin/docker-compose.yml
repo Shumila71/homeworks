@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+ server:
+    image: httpd:latest         
+    volumes:
+      - ./server/:/usr/local/apache2/htdocs/
+    ports:
+      - "1234:80"
+ db:
+    image: mysql:latest
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_PASSWORD: password
+      MYSQL_USER: user
+      MYSQL_ROOT_PASSWORD: example
+ phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+    depends_on:
+      - db
+ client:
+    build: client/
+    command: python ./client.py
+    network_mode: host
+    depends_on:
+      - server
