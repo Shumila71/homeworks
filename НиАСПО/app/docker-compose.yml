@@ -1,0 +1,21 @@
+version: '3'
+services:
+  container1:
+    build: ./1
+    ports:
+      - "8080:8080"
+    depends_on:
+      - container2
+    networks:
+      - niaspo9
+
+  container2:
+    build: ./2
+    ports:
+      - "8181:8181"
+    networks:
+      - niaspo9
+  
+networks:
+  niaspo9:
+    external: true
