@@ -7,8 +7,9 @@ spec:
     app: app1
   ports:
     - protocol: TCP
-      port: 22
-      targetPort: 321
+      port: 5000
+      targetPort: 5000
+  type: LoadBalancer
 
 ---
 
@@ -21,8 +22,9 @@ spec:
     app: app2
   ports:
     - protocol: TCP
-      port: 12
-      targetPort: 32
+      port: 5001
+      targetPort: 5001
+  type: LoadBalancer
 
 ---
 
@@ -35,5 +37,6 @@ spec:
     app: app3
   ports:
     - protocol: TCP
-      port: 123
-      targetPort: 321
+      port: 5002
+      targetPort: 5002
+  type: LoadBalancer
