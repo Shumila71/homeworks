@@ -1,21 +1,54 @@
+# version: '3'
+# services:
+#   container1:
+#     build: ./1
+#     ports:
+#       - "8080:8080"
+#     depends_on:
+#       - container2
+#     networks:
+#       - niaspo9
+
+#   container2:
+#     build: ./2
+#     ports:
+#       - "8181:8181"
+    # networks:
+    #   - niaspo9
+  
+# networks:
+#   niaspo9:
+#     external: true
+
 version: '3'
 services:
-  container1:
-    build: ./1
+  app1:
+    build: ./-1
     ports:
-      - "8080:8080"
+      - "5000:5000"
     depends_on:
-      - container2
+      - app2
     networks:
       - niaspo9
 
-  container2:
-    build: ./2
+  app2:
+    build: ./-2
     ports:
-      - "8181:8181"
+      - "5001:5001"
     networks:
       - niaspo9
-  
+
+  app3:
+    build: ./-3
+    ports:
+      - "5002:5002"
+    depends_on:
+      - app1
+    networks:
+      - niaspo9
+
 networks:
   niaspo9:
     external: true
+
+
