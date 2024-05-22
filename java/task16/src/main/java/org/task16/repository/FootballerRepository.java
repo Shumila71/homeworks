@@ -23,13 +23,16 @@ public class FootballerRepository
         session = sessionFactory.openSession();
     }
 
-    public void AddFootballer(Footballer footballer, Long gameId)
+    public void AddFootballer(Footballer footballer, Long teamId)
     {
         var t = session.beginTransaction();
-        var team = session.get(Team.class, gameId);
-        footballer.setTeam(team);
+        var team = session.get(Team.class, teamId);
         session.persist(footballer);
+
+        team.getFootballers().add(footballer);
+        session.update(team);
         t.commit();
+
     }
 
     public void DeleteFootballer(Long id)

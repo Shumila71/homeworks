@@ -1,0 +1,1 @@
+[org.task22.entity.Team@1068c7f2, org.task22.entity.Team@6e7b6323, org.task22.entity.Team@3b69718, org.task22.entity.Team@1f52ae89, org.task22.entity.Team@49d3bdc6, org.task22.entity.Team@7c04ada4, org.task22.entity.Team@4b3deb6b, org.task22.entity.Team@41113263]

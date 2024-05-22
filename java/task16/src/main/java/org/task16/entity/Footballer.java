@@ -17,9 +17,9 @@ public class Footballer {
     private String firstName;
     @Column(name="lastName", nullable=false, length=25)
     private String lastName;
-//    @Column(name="game_id")
-//    public Long gameId;
 
-    @ManyToOne
-    private Team team;
+
+
+    @Column(name="team_id")
+    public Long teamId;
 }

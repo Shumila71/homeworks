@@ -18,7 +18,7 @@ public class BeanConfig
     public HikariDataSource dataSource()
     {
         var config = new HikariConfig();
-        config.setJdbcUrl("jdbc:postgresql://localhost:5432/postgres");
+        config.setJdbcUrl("jdbc:postgresql://localhost:5432/test2");
         config.setUsername("postgres");
         config.setPassword("password");
 
@@ -30,7 +30,7 @@ public class BeanConfig
     {
         var sessionFactoryBean = new LocalSessionFactoryBean();
         sessionFactoryBean.setDataSource(dataSource);
-        sessionFactoryBean.setPackagesToScan("org.task15");
+        sessionFactoryBean.setPackagesToScan("org.task16");
 
         var properties = new Properties();
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");

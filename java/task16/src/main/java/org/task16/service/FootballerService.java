@@ -15,9 +15,9 @@ public class FootballerService
 {
     private FootballerRepository teamRepository;
 
-    public void AddFootballer(Footballer level, Long teamId)
+    public void AddFootballer(Footballer f, Long teamId)
     {
-        teamRepository.AddFootballer(level, teamId);
+        teamRepository.AddFootballer(f, teamId);
     }
 
     public void DeleteFootballer(Long id)

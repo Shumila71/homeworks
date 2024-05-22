@@ -15,10 +15,11 @@ public class Team
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name="name", nullable=false, length=25)
+    @Column(name="name", length=25)
     private String name;
-    @Column(name="creation_date", nullable=false, length=25)
+    @Column(name="creation_date", length=25)
     private String creationDate;
-    @OneToMany
-    private List <Footballer> footballers;
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "team_id")
+    private List<Footballer> footballers;
 }
