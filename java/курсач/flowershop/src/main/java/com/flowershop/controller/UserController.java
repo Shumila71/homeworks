@@ -16,10 +16,8 @@ public class UserController
     UserService userService;
     @Autowired
     OrderService orderService;
-
     @GetMapping("/account")
-    public String accountPage(Principal principal, Model model)
-    {
+    public String accountPage(Principal principal, Model model){
         var user = userService.getUserByName(principal.getName());
         model.addAttribute("user", user);
         return "account";
